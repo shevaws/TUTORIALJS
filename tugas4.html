@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <title>Tugas Web</title>
+  <style>
+
+    /* ==============================
+       EXERCISE 1 - ONLINE MEDIA
+    ============================== */
+
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    .judul {
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .judul span {
+      color: #1a73e8;
+    }
+
+    .judul span.media {
+      color: orange;
+    }
+
+    /* Navbar */
+    .navbar {
+      background-color: #1a73e8;
+      padding: 10px;
+    }
+
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      margin-right: 14px;
+      font-size: 13px;
+    }
+
+    /* Grid 6 kotak - 3 kolom x 2 baris */
+    .grid {
+      display: flex;
+      flex-wrap: wrap;
+      width: 555px;
+      margin-top: 20px;
+    }
+
+    .kotak {
+      width: 180px;
+      height: 150px;
+      color: white;
+      font-size: 15px;
+      font-weight: bold;
+      display: flex;
+      align-items: flex-end;
+      padding: 10px;
+      margin: 3px;
+    }
+
+    .hijau     { background-color: #27ae60; }
+    .oranye    { background-color: #e67e22; }
+    .merah     { background-color: #e74c3c; }
+    .biru      { background-color: #2980b9; }
+    .kuning    { background-color: #f39c12; }
+    .hijautua  { background-color: #1abc9c; }
+
+    /* ==============================
+       EXERCISE 2 - LAYOUT
+    ============================== */
+
+    .layout-a {
+      width: 500px;
+      border: 2px solid black;
+      margin-top: 30px;
+    }
+
+    .header-a {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px;
+      border-bottom: 2px solid black;
+    }
+
+    .logo-box {
+      border: 1px solid black;
+      padding: 10px 16px;
+    }
+
+    .gambar-box {
+      width: 150px;
+      height: 70px;
+      background-color: #ccc;
+    }
+
+    .nav-a {
+      text-align: center;
+      padding: 10px;
+      border-bottom: 2px solid black;
+      font-weight: bold;
+    }
+
+    .konten-a {
+      padding: 14px;
+      border-bottom: 3px solid black;
+    }
+
+    .garis {
+      border: none;
+      border-top: 1px solid #aaa;
+      margin: 7px 0;
+    }
+
+    .footer-a {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px;
+    }
+
+    .kotak-footer {
+      width: 55px;
+      height: 55px;
+      background-color: #888;
+    }
+
+    /* Layout B */
+    .layout-b {
+      width: 500px;
+      border: 2px solid black;
+      margin-top: 30px;
+    }
+
+    .nav-b {
+      text-align: center;
+      padding: 10px;
+      font-weight: bold;
+      border-bottom: 3px solid black;
+    }
+
+    .isi-b {
+      display: flex;
+    }
+
+    .sidebar-b {
+      width: 110px;
+      border-right: 2px solid black;
+      padding: 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .tombol-sidebar {
+      background-color: #888;
+      height: 28px;
+    }
+
+    .konten-b {
+      flex: 1;
+      padding: 14px;
+    }
+
+    /* ==============================
+       EXERCISE 3 - ADVANCED LAYOUT
+    ============================== */
+
+    .layout-c {
+      width: 500px;
+      border: 2px solid black;
+      margin-top: 30px;
+    }
+
+    .baris-atas {
+      display: flex;
+      border-bottom: 2px solid black;
+    }
+
+    .logo-c {
+      width: 120px;
+      border-right: 2px solid black;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      padding: 20px;
+    }
+
+    .banner-c {
+      flex: 1;
+      height: 90px;
+      background-color: #aaa;
+    }
+
+    .baris-tengah {
+      display: flex;
+      border-bottom: 2px solid black;
+    }
+
+    .kosong-c {
+      width: 120px;
+      border-right: 2px solid black;
+    }
+
+    .teks-tengah {
+      flex: 1;
+      padding: 12px;
+    }
+
+    .baris-bawah {
+      display: flex;
+    }
+
+    .nav-c {
+      width: 120px;
+      border-right: 2px solid black;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      padding: 14px;
+    }
+
+    .konten-c {
+      flex: 1;
+      padding: 12px;
+      border-right: 2px solid black;
+    }
+
+    .iklan-c {
+      width: 90px;
+      background-color: #aaa;
+    }
+
+    .footer-c {
+      border-top: 3px solid black;
+      margin: 10px 12px;
+    }
+
+    /* ==============================
+       EXERCISE 4 - JAVASCRIPT
+    ============================== */
+
+    .js-section {
+      margin-top: 30px;
+      width: 500px;
+    }
+
+    .js-section input {
+      width: 80px;
+      padding: 6px;
+      font-size: 14px;
+    }
+
+    .js-section button {
+      padding: 7px 16px;
+      margin-left: 6px;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    #hasil {
+      margin-top: 10px;
+      font-weight: bold;
+      color: #1a73e8;
+    }
+
+    #kotak-demo {
+      border: 2px solid #ccc;
+      padding: 16px;
+      margin-top: 16px;
+      background-color: #f9f9f9;
+      text-align: left;
+    }
+
+    .btn-alignment {
+      background-color: #27ae60;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      cursor: pointer;
+      margin-top: 10px;
+      margin-right: 8px;
+    }
+
+    .btn-warna {
+      background-color: #e67e22;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- ===== EXERCISE 1 ===== -->
+  <h2>Exercise 1 - Online Media</h2>
+
+  <div class="judul">
+    <span>ONLINE</span> <span class="media">MEDIA</span>
+  </div>
+
+  <div class="navbar">
+    <a href="#">Home</a>
+    <a href="#">Strategy</a>
+    <a href="#">Solusi</a>
+    <a href="#">Marketing</a>
+    <a href="#">Workshop</a>
+    <a href="#">Our Work</a>
+    <a href="#">Produk</a>
+    <a href="#">Partner</a>
+    <a href="#">Inspirasi</a>
+    <a href="#">FAQ</a>
+  </div>
+
+  <div class="grid">
+    <div class="kotak hijau">Analytic</div>
+    <div class="kotak oranye">Creative</div>
+    <div class="kotak merah">Development</div>
+    <div class="kotak biru">Marketing</div>
+    <div class="kotak kuning">Media</div>
+    <div class="kotak hijautua">Optimitation</div>
+  </div>
+
+
+  <!-- ===== EXERCISE 2 ===== -->
+  <h2>Exercise 2 - Layout</h2>
+
+  <!-- Layout A -->
+  <h3>Layout A</h3>
+  <div class="layout-a">
+    <div class="header-a">
+      <div class="logo-box">Logo</div>
+      <div class="gambar-box"></div>
+    </div>
+    <div class="nav-a">Navigasi</div>
+    <div id="konten-ex2" class="konten-a">
+      Ini adalah konten dari Layout A. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+    </div>
+    <div class="footer-a">
+      <div class="kotak-footer"></div>
+      <div class="kotak-footer"></div>
+    </div>
+  </div>
+
+  <!-- Layout B -->
+  <h3>Layout B</h3>
+  <div class="layout-b">
+    <div class="nav-b">Navigasi</div>
+    <div class="isi-b">
+      <div class="sidebar-b">
+        <div class="tombol-sidebar"></div>
+        <div class="tombol-sidebar"></div>
+        <div class="tombol-sidebar"></div>
+        <div class="tombol-sidebar"></div>
+      </div>
+      <div id="konten-ex2b" class="konten-b">
+        Ini adalah konten dari Layout B. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        Duis aute irure dolor in reprehenderit in voluptate.
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ===== EXERCISE 3 ===== -->
+  <h2>Exercise 3 - Advanced Layout</h2>
+
+  <div class="layout-c">
+    <div class="baris-atas">
+      <div class="logo-c">Logo</div>
+      <div class="banner-c"></div>
+    </div>
+    <div class="baris-tengah">
+      <div class="kosong-c"></div>
+      <div class="teks-tengah">
+        <hr class="garis"><hr class="garis">
+        <hr class="garis"><hr class="garis">
+      </div>
+    </div>
+    <div class="baris-bawah">
+      <div class="nav-c">Navigasi</div>
+      <div id="konten-ex3" class="konten-c">
+        Ini adalah konten dari Layout Advanced. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        Duis aute irure dolor in reprehenderit in voluptate.
+      </div>
+      <div class="iklan-c"></div>
+    </div>
+    <div class="footer-c"></div>
+  </div>
+
+
+  <!-- ===== EXERCISE 4 - JAVASCRIPT ===== -->
+  <h2>Exercise 4 - JavaScript</h2>
+
+  <!-- Bagian 1: Hitung bilangan ganjil -->
+  <div class="js-section">
+    <h3>Hitung Jumlah Bilangan Ganjil</h3>
+    <label>Min: <input type="number" id="minVal" value="1" /></label>
+    <label>Max: <input type="number" id="maxVal" value="8" /></label>
+    <button onclick="hitungGanjil()">Hitung</button>
+    <div id="hasil"></div>
+  </div>
+
+  <!-- Bagian 2: Tombol untuk mengubah konten di Exercise 2 & 3 -->
+  <div class="js-section">
+    <h3>Tombol Interaktif (mengubah konten Exercise 2 & 3)</h3>
+    <p style="font-size:13px; color:#555; margin-bottom:8px;">
+      Tombol di bawah akan mengubah alignment teks dan warna background kotak konten di layout Exercise 2 dan 3 di atas.
+    </p>
+    <button class="btn-alignment" onclick="gantiAlignment()">Ganti Alignment Teks</button>
+    <button class="btn-warna" onclick="toggleWarna()">Toggle Warna Background</button>
+  </div>
+
+
+  <!-- ===== JAVASCRIPT ===== -->
+  <script>
+
+    // --- Fungsi 1: Hitung bilangan ganjil ---
+    function hitungGanjil() {
+      var min = parseInt(document.getElementById("minVal").value);
+      var max = parseInt(document.getElementById("maxVal").value);
+      var total = 0;
+      var daftar = [];
+
+      for (var i = min; i <= max; i++) {
+        if (i % 2 != 0) {
+          total += i;
+          daftar.push(i);
+        }
+      }
+
+      document.getElementById("hasil").innerHTML =
+        "Bilangan ganjil: " + daftar.join(" + ") + " = " + total;
+    }
+
+    // --- Fungsi 2: Ganti alignment teks di konten Exercise 2 & 3 ---
+    var alignSekarang = "left";
+
+    function gantiAlignment() {
+      if (alignSekarang == "left") {
+        alignSekarang = "center";
+      } else if (alignSekarang == "center") {
+        alignSekarang = "right";
+      } else {
+        alignSekarang = "left";
+      }
+      // Ubah alignment di semua kotak konten Exercise 2 dan 3
+      document.getElementById("konten-ex2").style.textAlign = alignSekarang;
+      document.getElementById("konten-ex2b").style.textAlign = alignSekarang;
+      document.getElementById("konten-ex3").style.textAlign = alignSekarang;
+    }
+
+    // --- Fungsi 3: Toggle warna background kotak konten Exercise 2 & 3 ---
+    var warnaAsli = "#ffffff";
+    var warnaUbah = "#aed6f1";
+    var sudahUbah = false;
+
+    function toggleWarna() {
+      if (sudahUbah == false) {
+        document.getElementById("konten-ex2").style.backgroundColor = warnaUbah;
+        document.getElementById("konten-ex2b").style.backgroundColor = warnaUbah;
+        document.getElementById("konten-ex3").style.backgroundColor = warnaUbah;
+        sudahUbah = true;
+      } else {
+        document.getElementById("konten-ex2").style.backgroundColor = warnaAsli;
+        document.getElementById("konten-ex2b").style.backgroundColor = warnaAsli;
+        document.getElementById("konten-ex3").style.backgroundColor = warnaAsli;
+        sudahUbah = false;
+      }
+    }
+
+  </script>
+
+</body>
+</html>

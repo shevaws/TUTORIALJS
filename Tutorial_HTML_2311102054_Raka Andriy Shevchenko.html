@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Biodata Mahasiswa</title>
+</head>
+<body>
+
+<h2>Form Biodata</h2>
+
+<form>
+<table>
+
+<tr>
+    <td>NIM</td>
+    <td>:</td>
+    <td><input type="text" name="nim"></td>
+</tr>
+
+<tr>
+    <td>Nama</td>
+    <td>:</td>
+    <td><input type="text" name="nama" size="40"></td>
+</tr>
+
+<tr>
+    <td>Tgl Lahir (dd-mm-yyyy)</td>
+    <td>:</td>
+    <td><input type="date" name="tgl_lahir"></td>
+</tr>
+
+<tr>
+    <td>Jenis Kelamin</td>
+    <td>:</td>
+    <td>
+        <input type="radio" name="jk" value="Laki-Laki"> Laki-Laki
+        <input type="radio" name="jk" value="Perempuan"> Perempuan
+    </td>
+</tr>
+
+<tr>
+    <td>Alamat di Purwokerto</td>
+    <td>:</td>
+    <td>
+        <textarea name="alamat" rows="4" cols="30"></textarea>
+    </td>
+</tr>
+
+<tr>
+    <td>Tinggal di</td>
+    <td>:</td>
+    <td>
+        <select name="tinggal">
+            <option>--pilih--</option>
+            <option>Kos/kontrakan</option>
+            <option>Rumah saudara</option>
+            <option>Rumah orang tua</option>
+        </select>
+    </td>
+</tr>
+
+<tr>
+    <td>Pilih 2 hobi yang paling disukai</td>
+    <td>:</td>
+    <td>
+        <input type="checkbox" name="hobi" value="Science"> Science <br>
+        <input type="checkbox" name="hobi" value="Technology"> Technology <br>
+        <input type="checkbox" name="hobi" value="Art"> Art <br>
+        <input type="checkbox" name="hobi" value="Sport"> Sport
+    </td>
+</tr>
+
+<tr>
+    <td></td>
+    <td></td>
+    <td>
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+    </td>
+</tr>
+
+</table>
+</form>
+
+</body>
+</html>

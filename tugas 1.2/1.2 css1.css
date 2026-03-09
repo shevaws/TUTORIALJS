@@ -1,0 +1,43 @@
+body{
+font-family: Arial;
+text-align:center;
+}
+
+.logo span{
+color:orange;
+}
+
+.menu{
+list-style:none;
+background:#1e73be;
+padding:10px;
+}
+
+.menu li{
+display:inline;
+color:white;
+margin:10px;
+}
+
+.grid{
+width:400px;
+margin:auto;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:10px;
+}
+
+.box{
+height:120px;
+color:white;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:18px;
+}
+
+.green{background:green;}
+.orange{background:orange;}
+.red{background:red;}
+.blue{background:teal;}
+.yellow{background:gold;}
